@@ -123,7 +123,7 @@
       }
       .portfolio-panel.open {
         right: 0;
-        z-index: 999;
+        z-index: 990;
         height: 100%;
         overflow:scroll;
       }
@@ -152,7 +152,30 @@
         object-fit: cover;
         border-radius: 5px;
       }
-
+      footer {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        background-color: rgba(232, 232, 232, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+      }
+      .footer-container {
+        display: flex;
+        width: 1250px;
+        height: 30px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+      }
+      .footer-container p {
+        color: black;
+        text-decoration: none;
+        margin: 0;
+      }
       @media (max-width: 768px) {
         body{
           background-position: center;
