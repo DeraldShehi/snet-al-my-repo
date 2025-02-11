@@ -85,11 +85,11 @@
         transition: background-color 0.3s;
         cursor: pointer;
         border-radius: 4px;
-        background-color: rgba(171, 168, 168, 0.768);
+        background-color:#8e44ad ;
         font-size: 14px;
       }
       .button:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: transparent;
       }
       .stars {
         position: absolute;
