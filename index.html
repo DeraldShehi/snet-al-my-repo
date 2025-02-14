@@ -10,6 +10,10 @@
     <header>
       <nav>
         <div class="logo">s<span>net</span></div>
+        <div class="nav-buttons">
+          <button class="nav-btn" onclick="togglePortfolio()">Our Portfolio</button>
+          <button class="nav-btn" onclick="contactUs()">Contact Us</button>
+        </div>
       </nav>
     </header>
     <div class="container">
@@ -25,7 +29,7 @@
             software that helps companies to grow <br />And our next goal is to
             connect to the future.
           </p>
-          <a class="button" onclick="togglePortfolio()">Our Portfolio</a>
+          <button class="button" onclick="togglePortfolio()">Our Portfolio</button>
         </div>
         <div class="background-image"></div>
       </main>
@@ -86,10 +90,20 @@
     </footer>
 
     <script>
-      function togglePortfolio() {
-        const panel = document.querySelector('.portfolio-panel')
-        panel.classList.toggle('open')
+      function togglePortfolio(){
+        const panel = document.querySelector('.portfolio-panel');
+        panel.classList.toggle('open');
       }
+      function closePortfolio(){
+        const panel = document.querySelector('.portfolio-panel');
+        panel.classList.remove('open');
+      }
+      document.body.addEventListener('click', function(event) {
+        const panel = document.querySelector('.portfolio-panel');
+        if (!panel.contains(event.target) && !event.target.closest('.nav-btn') && !event.target.closest('.button')) {
+          closePortfolio();
+        }
+      });
     </script>
   </body>
 </html>
