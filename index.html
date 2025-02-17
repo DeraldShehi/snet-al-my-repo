@@ -78,7 +78,7 @@
           <p>Data marketplace</p>
         </div>
         <!-- Add more portfolio items as needed -->
-      </div>
+      </div class="contact">
       <h2>CONTACT US</h2>
       <p>Email: info.snet.al@gmail.com</p>
       <p>Tel: +3556047685.</p>
@@ -89,21 +89,6 @@
       </div>
     </footer>
 
-    <script>
-      function togglePortfolio(){
-        const panel = document.querySelector('.portfolio-panel');
-        panel.classList.toggle('open');
-      }
-      function closePortfolio(){
-        const panel = document.querySelector('.portfolio-panel');
-        panel.classList.remove('open');
-      }
-      document.body.addEventListener('click', function(event) {
-        const panel = document.querySelector('.portfolio-panel');
-        if (!panel.contains(event.target) && !event.target.closest('.nav-btn') && !event.target.closest('.button')) {
-          closePortfolio();
-        }
-      });
-    </script>
+    <script src="./main.js"></script>
   </body>
 </html>
